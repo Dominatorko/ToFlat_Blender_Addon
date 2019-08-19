@@ -4,7 +4,7 @@ bl_info = {
     "version": (0, 1),
     "blender": (2, 80, 0),
     "location": "View3D",
-    "description": "ToFlat: Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ADDON_ToFlat",
+    "description": "Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ToFlat",
     "warning": "",
     "category": "3DView",
 }
@@ -30,8 +30,6 @@ class ToFlat(bpy.types.Operator):
                     if space.shading.light != 'FLAT':
                         mLight = space.shading.light
                         mColorType = space.shading.color_type
-                        print(mLight)
-                        print(mColorType)
                         space.shading.light = 'FLAT'
                         space.shading.color_type = 'SINGLE'
                         space.shading.single_color = (0,0,0)
