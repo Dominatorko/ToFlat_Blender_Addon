@@ -5,6 +5,6 @@ The addon allows you to switch the view to see the silhouette of the model, and 
 
 How to use:
 1) Install
-2) Object->ADDON_UTFH_ToFlat
+2) Object->ADDON_ToFlat
 
-ADDON_UTFH_ToFlat toggle between views 
+ADDON_ToFlat toggle between views 
