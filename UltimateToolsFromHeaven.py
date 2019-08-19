@@ -1,10 +1,10 @@
 bl_info = {
-    "name": "UltimateToolsFromHeaven",
+    "name": "ToFlat",
     "author": "NorthForge",
     "version": (0, 1),
     "blender": (2, 80, 0),
     "location": "View3D",
-    "description": "ToFlat: Allows you to switch the view to see the silhouette of the model, and switch the view back. Usage: Object->ADDON_UTFH_ToFlat",
+    "description": "ToFlat: Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ADDON_ToFlat",
     "warning": "",
     "category": "3DView",
 }
@@ -17,7 +17,7 @@ class ToFlat(bpy.types.Operator):
     mColorType = ''
    
     bl_idname = "shading.light"
-    bl_label = "ADDON_UTFH_ToFlat"
+    bl_label = "ADDON_ToFlat"
     bl_options = {'REGISTER', 'UNDO'}
     
     def execute(self, context):
