@@ -11,11 +11,11 @@ bl_info = {
 
 import bpy
 
+mLight =''
+mColorType = ''
+
 class ToFlat(bpy.types.Operator):
-    
-    mLight =''
-    mColorType = ''
-   
+
     bl_idname = "shading.light"
     bl_label = "ToFlat"
     bl_options = {'REGISTER', 'UNDO'}
