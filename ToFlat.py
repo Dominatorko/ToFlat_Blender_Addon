@@ -17,7 +17,7 @@ class ToFlat(bpy.types.Operator):
     mColorType = ''
    
     bl_idname = "shading.light"
-    bl_label = "ADDON_ToFlat"
+    bl_label = "ToFlat"
     bl_options = {'REGISTER', 'UNDO'}
     
     def execute(self, context):
