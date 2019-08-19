@@ -47,7 +47,6 @@ def register():
     bpy.utils.register_class(ToFlat)
     bpy.types.VIEW3D_MT_object.append(menu_func)
 
-
 def unregister():
     bpy.utils.unregister_class(ToFlat)
     bpy.types.VIEW3D_MT_object.remove(menu_func)
