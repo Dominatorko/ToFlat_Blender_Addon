@@ -4,38 +4,40 @@ bl_info = {
     "version": (0, 1),
     "blender": (2, 80, 0),
     "location": "View3D",
-    "description": "Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ToFlat",
+    "description": "ToFlat: Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ADDON_ToFlat",
     "warning": "",
     "category": "3DView",
 }
 
 import bpy
 
-mLight =''
-mColorType = ''
-
 class ToFlat(bpy.types.Operator):
-
+    
+    ToFlatmLight ='FLAT'
+    ToFlatmColorType = 'SINGLE'
+    
     bl_idname = "shading.light"
     bl_label = "ToFlat"
     bl_options = {'REGISTER', 'UNDO'}
     
     def execute(self, context):
-        global mLight
-        global mColorType
+        global ToFlatmLight
+        global ToFlatmColorType
         my_areas = bpy.context.workspace.screens[0].areas
         for area in my_areas:
             for space in area.spaces:
                 if space.type == 'VIEW_3D':
                     if space.shading.light != 'FLAT':
-                        mLight = space.shading.light
-                        mColorType = space.shading.color_type
+                        ToFlatmLight = space.shading.light
+                        ToFlatmColorType = space.shading.color_type
                         space.shading.light = 'FLAT'
                         space.shading.color_type = 'SINGLE'
                         space.shading.single_color = (0,0,0)
+                        return {'FINISHED'} 
                     else:
-                        space.shading.light = mLight
-                        space.shading.color_type = mColorType
+                        space.shading.light = ToFlatmLight
+                        space.shading.color_type = ToFlatmColorType
+
         return {'FINISHED'}     
     
 def menu_func(self, context):
