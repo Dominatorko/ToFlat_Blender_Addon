@@ -37,7 +37,6 @@ class ToFlat(bpy.types.Operator):
                     else:
                         space.shading.light = ToFlatmLight
                         space.shading.color_type = ToFlatmColorType
-
         return {'FINISHED'}     
     
 def menu_func(self, context):
