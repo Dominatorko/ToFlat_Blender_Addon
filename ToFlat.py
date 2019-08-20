@@ -4,7 +4,7 @@ bl_info = {
     "version": (0, 1),
     "blender": (2, 80, 0),
     "location": "View3D",
-    "description": "ToFlat: Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ADDON_ToFlat",
+    "description": "Allows you to switch the view to see the silhouette of the model, and switch the view back Usage: Object->ToFlat",
     "warning": "",
     "category": "3DView",
 }
