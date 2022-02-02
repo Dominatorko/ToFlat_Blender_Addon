@@ -22,10 +22,15 @@ class ToFlat(bpy.types.Operator):
                         space.shading.light = 'FLAT'
                         space.shading.color_type = 'SINGLE'
                         space.shading.single_color = (0, 0, 0)
+                        space.shading.background_type = 'VIEWPORT'
+                        space.shading.background_color = (1, 1, 1)
+                        space.overlay.show_overlays = False
                         return {'FINISHED'}
                     else:
                         space.shading.light = toFlatLight
                         space.shading.color_type = toFlatColorType
+                        space.shading.background_type = 'THEME'
+                        space.overlay.show_overlays = True
         return {'FINISHED'}
 
 
